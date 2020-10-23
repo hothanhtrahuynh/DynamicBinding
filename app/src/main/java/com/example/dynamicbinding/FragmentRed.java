@@ -71,6 +71,10 @@ public class FragmentRed extends Fragment implements FragmenCallbacks {
                 pos=0;
                 String position = Integer.toString(pos);
                 main.onMsgFromFragToMain("RED_FRAG",position,student);
+                btnRedF.getBackground().setAlpha(20);
+                btnRedP.getBackground().setAlpha(100);
+                btnRedL.getBackground().setAlpha(100);
+                btnRedN.getBackground().setAlpha(100);
             }
         });
 
@@ -80,6 +84,10 @@ public class FragmentRed extends Fragment implements FragmenCallbacks {
                 pos=pos-1;
                 String position = Integer.toString(pos);
                 main.onMsgFromFragToMain("RED_FRAG",position,student);
+                btnRedF.getBackground().setAlpha(100);
+                btnRedP.getBackground().setAlpha(20);
+                btnRedL.getBackground().setAlpha(100);
+                btnRedN.getBackground().setAlpha(100);
             }
         });
 
@@ -89,6 +97,10 @@ public class FragmentRed extends Fragment implements FragmenCallbacks {
                 pos=pos+1;
                 String position = Integer.toString(pos);
                 main.onMsgFromFragToMain("RED_FRAG",position,student);
+                btnRedF.getBackground().setAlpha(100);
+                btnRedP.getBackground().setAlpha(100);
+                btnRedL.getBackground().setAlpha(100);
+                btnRedN.getBackground().setAlpha(20);
             }
         });
 
@@ -98,6 +110,10 @@ public class FragmentRed extends Fragment implements FragmenCallbacks {
                 pos=-1;
                 String position = Integer.toString(pos);
                 main.onMsgFromFragToMain("RED_FRAG",position,student);
+                btnRedF.getBackground().setAlpha(100);
+                btnRedP.getBackground().setAlpha(100);
+                btnRedL.getBackground().setAlpha(20);
+                btnRedN.getBackground().setAlpha(100);
             }
         });
         return layout_red;
