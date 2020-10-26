@@ -101,15 +101,17 @@ public class FragmentBlue extends Fragment implements FragmenCallbacks{
     @Override
     public void onMsgFromMainToFragment(String position, Student student) {
         int pos;
-        if(position.equals("-1")){
+        pos = Integer.parseInt(position);
+        if(pos < 0){
            pos = list.size() -1;
         }
-        else {
-            pos = Integer.parseInt(position);
+        if(pos >= list.size()){
+            pos=0;
         }
-       listView.setSelection(pos);
-       listView.performItemClick(listView.getChildAt(pos),pos,pos);
-       // listView.setC
+        position = Integer.toString(pos);
         main.onMsgFromFragToMain("BLUE_FRAG",position,(Student)list.get(pos));
+        listView.setSelection(pos);
+        listView.performItemClick(listView.getChildAt(pos),pos,pos);
+
     }
 }
